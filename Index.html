@@ -120,28 +120,10 @@
             box-shadow: 0 0 10px var(--dneg-red);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover { color: var(--text-white); }
-
         .btn-dneg {
-            background-color: var(--dneg-red);
+            background-color: #25D366; /* WhatsApp Green Accent for Direct Messaging */
             color: var(--text-white);
-            padding: 12px 28px;
+            padding: 12px 24px;
             font-weight: 700;
             font-size: 12px;
             letter-spacing: 1.5px;
@@ -154,12 +136,12 @@
             align-items: center;
             gap: 10px;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 20px var(--dneg-red-glow);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
         }
 
         .btn-dneg:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(229, 9, 20, 0.6);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
         }
 
         /* HERO SECTION */
@@ -233,10 +215,10 @@
             object-fit: cover;
         }
 
-        /* ADAPTIVE STATS STRIP */
+        /* UPDATED STATS STRIP */
         .stats-strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
             gap: clamp(15px, 3vw, 30px);
             padding: clamp(30px, 5vw, 50px) 0;
             border-top: 1px solid var(--border-subtle);
@@ -250,107 +232,28 @@
         }
 
         .stat-num {
-            font-size: clamp(28px, 4vw, 38px);
+            font-size: clamp(24px, 3.5vw, 34px);
             font-weight: 800;
             font-family: var(--font-display);
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 6px;
         }
 
         .stat-label {
-            font-size: clamp(9px, 1.2vw, 11px);
+            font-size: clamp(10px, 1.2vw, 12px);
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--text-gray);
             font-weight: 600;
         }
 
-        /* SECTIONS & SELF-ADJUSTING FLYING CARDS GRID */
+        /* SECTIONS & CONTACT */
         section {
             padding: clamp(50px, 8vw, 80px) 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .section-header {
-            margin-bottom: clamp(30px, 5vw, 50px);
-            border-bottom: 1px solid var(--border-subtle);
-            padding-bottom: 20px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(24px, 4.5vw, 46px);
-            font-weight: 800;
-        }
-
-        /* AUTO-ADJUSTING GRID FOR ALL SCREEN SIZES */
-        .dneg-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-            gap: clamp(20px, 3vw, 30px);
-        }
-
-        .fly-card {
-            background: var(--surface-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-            will-change: transform, opacity;
-            transition: border-color 0.4s ease, box-shadow 0.4s ease;
-        }
-
-        .fly-card:hover {
-            border-color: var(--dneg-red);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(229, 9, 20, 0.2);
-        }
-
-        .dneg-card-media {
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            overflow: hidden;
-            position: relative;
-            background: #000;
-        }
-
-        .dneg-card-media img, .dneg-card-media video, .dneg-card-media iframe {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: none;
-            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .dneg-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(7, 7, 9, 0.95) 0%, rgba(7, 7, 9, 0.2) 60%, transparent 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: clamp(15px, 3vw, 30px);
-        }
-
-        .card-badge {
-            align-self: flex-start;
-            background-color: var(--dneg-red);
-            color: var(--text-white);
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            padding: 4px 10px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .card-title {
-            font-size: clamp(18px, 2.5vw, 24px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 8px;
-        }
-
-        /* CONTACT SECTION */
         .contact-frame {
             background: var(--surface-dark);
             border: 1px solid var(--border-subtle);
@@ -361,20 +264,17 @@
             gap: clamp(30px, 5vw, 50px);
         }
 
+        /* CLEAN CONTACT ROW (REMOVED WEIRD SQUARES) */
         .info-row {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 25px;
         }
 
-        .info-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--surface-card);
-            border: 1px solid var(--border-subtle);
+        .info-icon-clean {
             color: var(--dneg-red);
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
@@ -523,15 +423,18 @@
             margin-bottom: 20px;
         }
 
-        /* RESPONSIVE MEDIA QUERIES */
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
+        .inquiry-card {
+            background: var(--surface-card);
+            border-left: 3px solid var(--dneg-red);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 2px;
         }
 
         @media (max-width: 600px) {
             nav { padding: 12px 15px; }
             .hero { padding-top: 90px; }
-            .btn-dneg { padding: 10px 18px; font-size: 11px; }
+            .btn-dneg { padding: 10px 16px; font-size: 10px; }
             .admin-header h2 { font-size: 16px; }
         }
     </style>
@@ -546,16 +449,9 @@
             <span style="font-size: 11px; color: var(--text-gray); letter-spacing: 1px;">/ MUSICAL NIGHTS</span>
         </div>
 
-        <ul class="nav-links">
-            <li><a href="#spotlight">Artist</a></li>
-            <li><a href="#showcase">Showcase</a></li>
-            <li><a href="#specialties">Capabilities</a></li>
-            <li><a href="#gallery">Gallery & Reels</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <a href="tel:9822796580" class="btn-dneg shimmer-card-fx">
-            <i data-lucide="phone" size="14"></i> 9822796580
+        <!-- DIRECT WHATSAPP LINK -->
+        <a href="https://wa.me/919822796580?text=Hello%20Dheermay%20Musical%20Nights,%20I%20want%20to%20inquire%20about%20booking%20a%20show." target="_blank" class="btn-dneg shimmer-card-fx">
+            <i data-lucide="message-circle" size="16"></i> WHATSAPP 9822796580
         </a>
     </nav>
 
@@ -566,7 +462,7 @@
             <p style="font-size: 12px; color: var(--text-gray); margin-bottom: 25px;">Enter security PIN to unlock studio panel</p>
             
             <input type="password" id="admin-pass" placeholder="Enter Security PIN" style="text-align: center; font-size: 18px; letter-spacing: 4px;">
-            <button class="btn-dneg shimmer-card-fx" style="width: 100%; justify-content: center; padding: 14px;" onclick="verifyAdminPassword()">UNLOCK DASHBOARD</button>
+            <button class="btn-dneg shimmer-card-fx" style="width: 100%; justify-content: center; padding: 14px; background: var(--dneg-red);" onclick="verifyAdminPassword()">UNLOCK DASHBOARD</button>
             <button onclick="closeLoginModal()" style="background: none; border: none; color: var(--text-gray); margin-top: 15px; cursor: pointer; font-size: 12px;">Cancel</button>
         </div>
     </div>
@@ -579,14 +475,23 @@
         </div>
 
         <div class="admin-nav-tabs">
-            <button class="admin-tab-btn active" onclick="switchAdminTab('hero-media')">Hero Spotlight & Video</button>
-            <button class="admin-tab-btn" onclick="switchAdminTab('gallery-media')">Insta Reels & Gallery</button>
-            <button class="admin-tab-btn" onclick="switchAdminTab('shows-media')">Stage Show Cards</button>
+            <button class="admin-tab-btn active" onclick="switchAdminTab('inquiries')">Customer Inquiries</button>
+            <button class="admin-tab-btn" onclick="switchAdminTab('hero-media')">Hero Spotlight & Video</button>
             <button class="admin-tab-btn" onclick="switchAdminTab('security')">Security PIN</button>
         </div>
 
-        <!-- TAB 1: Hero Spotlight & Video Upload -->
-        <div id="tab-hero-media" class="admin-tab-content active">
+        <!-- TAB 1: Customer Inquiries -->
+        <div id="tab-inquiries" class="admin-tab-content active">
+            <div class="admin-card">
+                <h3 class="font-display text-red" style="margin-bottom: 15px;">Received Booking Requests</h3>
+                <div id="admin-inquiries-list">
+                    <p style="color: var(--text-gray); font-size: 13px;">Loading booking inquiries...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: Hero Spotlight & Video Upload -->
+        <div id="tab-hero-media" class="admin-tab-content">
             <div class="admin-card">
                 <h3 class="font-display text-red" style="margin-bottom: 15px;">Update Artist Spotlight Photo (Device Upload)</h3>
                 <label class="file-upload-box">
@@ -596,60 +501,24 @@
             </div>
 
             <div class="admin-card">
-                <h3 class="font-display text-red" style="margin-bottom: 15px;">Update Main Showreel Video (HandBrake Device File or URL)</h3>
+                <h3 class="font-display text-red" style="margin-bottom: 15px;">Update Main Showreel Video</h3>
                 <label class="file-upload-box">
                     <input type="file" id="upload-hero-video-file" accept="video/*" style="display: none;" onchange="handleHeroVideoFileUpload(this)">
-                    <span id="txt-hero-video-upload">🎬 Upload HandBrake Compressed Video from Device</span>
+                    <span id="txt-hero-video-upload">🎬 Upload Video File from Device</span>
                 </label>
                 <p style="text-align: center; color: var(--text-gray); font-size: 12px; margin: 10px 0;">— OR —</p>
-                <input type="text" id="main-hero-vid-input" placeholder="Paste Direct Video MP4 Link or YouTube Embed Link">
-                <button class="btn-dneg" style="width: 100%; justify-content: center;" onclick="saveMainHeroVideoURL()">Save Video Link</button>
+                <input type="text" id="main-hero-vid-input" placeholder="Paste Direct MP4 Link or YouTube Link">
+                <button class="btn-dneg" style="width: 100%; justify-content: center; background: var(--dneg-red);" onclick="saveMainHeroVideoURL()">Save Video Link</button>
             </div>
         </div>
 
-        <!-- TAB 2: Instagram Reels & Videos -->
-        <div id="tab-gallery-media" class="admin-tab-content">
-            <div class="admin-card">
-                <h3 class="font-display text-red" style="margin-bottom: 15px;">Add Instagram Reel or Video</h3>
-                <input type="text" id="new-gallery-title" placeholder="Reel Title (e.g. Viral Sangeet Performance)">
-                <input type="text" id="new-gallery-views" placeholder="Live View Count (e.g. 2.4M Views)">
-                <input type="text" id="new-gallery-url" placeholder="Paste Instagram Reel Link or Video Link">
-                <button class="btn-dneg" style="width: 100%; justify-content: center;" onclick="saveGalleryVideo()">Add Reel to Gallery</button>
-            </div>
-
-            <div class="admin-card">
-                <h3 class="font-display" style="margin-bottom: 15px;">Manage Existing Gallery Reels</h3>
-                <div id="admin-gallery-list"></div>
-            </div>
-        </div>
-
-        <!-- TAB 3: Stage Show Cards CRUD -->
-        <div id="tab-shows-media" class="admin-tab-content">
-            <div class="admin-card">
-                <h3 class="font-display text-red" style="margin-bottom: 15px;">Add New Concert Card</h3>
-                <input type="text" id="show-badge" placeholder="Badge (e.g. GRAND CONCERT)">
-                <input type="text" id="show-title" placeholder="Show Title (e.g. Royal Palace Sangeet)">
-                <input type="text" id="show-desc" placeholder="Subtitle / Description">
-                <label class="file-upload-box">
-                    <input type="file" id="upload-show-file" accept="image/*" style="display: none;" onchange="handleShowImageSelect(this)">
-                    <span id="txt-show-img">🖼️ Upload Concert Image from Device</span>
-                </label>
-                <button class="btn-dneg" style="width: 100%; justify-content: center;" onclick="saveShowCard()">Publish Concert Card</button>
-            </div>
-
-            <div class="admin-card">
-                <h3 class="font-display" style="margin-bottom: 15px;">Manage / Delete Concert Cards</h3>
-                <div id="admin-shows-list"></div>
-            </div>
-        </div>
-
-        <!-- TAB 4: Security -->
+        <!-- TAB 3: Security -->
         <div id="tab-security" class="admin-tab-content">
             <div class="admin-card">
                 <h3 class="font-display text-red" style="margin-bottom: 15px;">Change Security Password</h3>
                 <input type="password" id="new-pin-1" placeholder="Enter New Security PIN">
                 <input type="password" id="new-pin-2" placeholder="Confirm New Security PIN">
-                <button class="btn-dneg" style="width: 100%; justify-content: center;" onclick="updateSecurityPin()">UPDATE PASSWORD</button>
+                <button class="btn-dneg" style="width: 100%; justify-content: center; background: var(--dneg-red);" onclick="updateSecurityPin()">UPDATE PASSWORD</button>
             </div>
         </div>
     </div>
@@ -673,101 +542,30 @@
             </video>
         </div>
 
-        <!-- STATS STRIP -->
+        <!-- UPDATED STATS STRIP -->
         <div class="stats-strip">
             <div class="stat-item">
-                <div class="stat-num text-red">500+</div>
-                <div class="stat-label">Live Shows</div>
+                <div class="stat-num text-red">100%</div>
+                <div class="stat-label">LIVE SHOWS</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Live Vocals & Band</div>
+                <div class="stat-num">LIVE VOCALS</div>
+                <div class="stat-label">& KARAOKE</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num text-red">50+</div>
-                <div class="stat-label">Cities Covered</div>
+                <div class="stat-num text-red">2.5 LAKH</div>
+                <div class="stat-label">JBL PROFESSIONAL SOUND SYSTEMS</div>
             </div>
             <div class="stat-item">
-                <div class="stat-num">4.9★</div>
-                <div class="stat-label">Client Rating</div>
+                <div class="stat-num">PLAYBACK</div>
+                <div class="stat-label">SINGER</div>
             </div>
         </div>
     </div>
 
-    <!-- SHOWCASE SECTION WITH FLYING CARDS -->
-    <section id="showcase">
-        <div class="section-header">
-            <span class="hero-tag" style="margin-bottom: 5px;">FEATURED PRODUCTIONS</span>
-            <h2 class="font-display">RECENT STAGE CONCERTS</h2>
-        </div>
-
-        <div class="dneg-grid" id="live-shows-grid">
-            <div class="fly-card shimmer-card-fx">
-                <div class="dneg-card-media">
-                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Concert">
-                    <div class="dneg-card-overlay">
-                        <span class="card-badge">GRAND CONCERT</span>
-                        <h3 class="font-display card-title">Symphony Stadium Night</h3>
-                        <p style="font-size: 13px; color: var(--text-gray);">Full live orchestra & laser stage production</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAPABILITIES SECTION -->
-    <section id="specialties">
-        <div class="section-header">
-            <span class="hero-tag" style="margin-bottom: 5px;">STAGE CAPABILITIES</span>
-            <h2 class="font-display">WHAT WE DELIVER</h2>
-        </div>
-
-        <div class="dneg-grid">
-            <div class="fly-card shimmer-card-fx" style="padding: clamp(20px, 4vw, 35px); background: var(--surface-dark);">
-                <i data-lucide="mic" class="text-red" size="36" style="margin-bottom: 20px;"></i>
-                <h3 class="font-display" style="font-size: 22px; margin-bottom: 10px;">Live Vocal & Band</h3>
-                <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">Versatile genres—Bollywood classics, Sufi medleys, Retro golden hits, and Pop anthems.</p>
-            </div>
-
-            <div class="fly-card shimmer-card-fx" style="padding: clamp(20px, 4vw, 35px); background: var(--surface-dark);">
-                <i data-lucide="music-2" class="text-red" size="36" style="margin-bottom: 20px;"></i>
-                <h3 class="font-display" style="font-size: 22px; margin-bottom: 10px;">Unplugged & Acoustic</h3>
-                <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">Intimate acoustic arrangements with skilled instrumentalists for exclusive VIP galas.</p>
-            </div>
-
-            <div class="fly-card shimmer-card-fx" style="padding: clamp(20px, 4vw, 35px); background: var(--surface-dark);">
-                <i data-lucide="sparkles" class="text-red" size="36" style="margin-bottom: 20px;"></i>
-                <h3 class="font-display" style="font-size: 22px; margin-bottom: 10px;">Full Concert Setup</h3>
-                <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">End-to-end concert audio engineering, sound design, and synchronized lighting control.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MEDIA GALLERY SECTION -->
-    <section id="gallery">
-        <div class="section-header">
-            <span class="hero-tag" style="margin-bottom: 5px;">VIRAL REELS & GALLERY</span>
-            <h2 class="font-display">LIVE PERFORMANCES</h2>
-        </div>
-
-        <div class="dneg-grid" id="live-gallery-grid">
-            <div class="fly-card shimmer-card-fx">
-                <div class="dneg-card-media">
-                    <video controls preload="metadata">
-                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div style="padding: 20px; background: var(--surface-dark);">
-                    <h4 class="font-display" style="font-size: 18px;">Live Symphony Highlight</h4>
-                    <p style="font-size: 12px; color: var(--text-gray); margin-top: 4px;">Concert Video Session</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CONTACT STUDIO SECTION -->
     <section id="contact">
-        <div class="contact-frame fly-card">
+        <div class="contact-frame">
             <div>
                 <span class="hero-tag">RESERVATIONS</span>
                 <h2 class="font-display" style="font-size: clamp(26px, 4vw, 38px); margin-bottom: 15px;">BOOK DHEERMAY LIVE</h2>
@@ -775,8 +573,9 @@
                     Contact directly to check available dates or request a performance setup quote.
                 </p>
 
+                <!-- ELEGANT ICON & TEXT LAYOUT WITHOUT WEIRD SQUARES -->
                 <div class="info-row">
-                    <div class="info-icon"><i data-lucide="phone-call"></i></div>
+                    <span class="info-icon-clean"><i data-lucide="phone" size="22"></i></span>
                     <div>
                         <div style="font-size: 11px; color: var(--text-gray); letter-spacing: 1px;">DIRECT PHONE</div>
                         <a href="tel:9822796580" style="color: var(--text-white); font-size: clamp(18px, 3vw, 22px); font-weight: 800; text-decoration: none;">9822796580</a>
@@ -784,7 +583,7 @@
                 </div>
 
                 <div class="info-row">
-                    <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                    <span class="info-icon-clean"><i data-lucide="map-pin" size="22"></i></span>
                     <div>
                         <div style="font-size: 11px; color: var(--text-gray); letter-spacing: 1px;">STUDIO ADDRESS</div>
                         <div style="font-size: 18px; font-weight: 700; color: var(--text-white);">Tukai Darshan</div>
@@ -794,11 +593,11 @@
 
             <div>
                 <form onsubmit="handleFormSubmit(event)">
-                    <input type="text" placeholder="ORGANIZER / FULL NAME" required>
-                    <input type="tel" placeholder="MOBILE CONTACT NUMBER" required>
-                    <input type="text" placeholder="EVENT DATE & LOCATION">
-                    <textarea rows="4" placeholder="EVENT DETAILS & STAGE REQUIREMENTS"></textarea>
-                    <button type="submit" class="btn-dneg shimmer-card-fx" style="width: 100%; justify-content: center; padding: 16px;">
+                    <input type="text" id="inq-name" placeholder="ORGANIZER / FULL NAME" required>
+                    <input type="tel" id="inq-phone" placeholder="MOBILE CONTACT NUMBER" required>
+                    <input type="text" id="inq-date" placeholder="EVENT DATE & LOCATION">
+                    <textarea id="inq-details" rows="4" placeholder="EVENT DETAILS & STAGE REQUIREMENTS"></textarea>
+                    <button type="submit" class="btn-dneg shimmer-card-fx" style="width: 100%; justify-content: center; padding: 16px; background: var(--dneg-red);">
                         SEND INQUIRY
                     </button>
                 </form>
@@ -813,7 +612,6 @@
 
     <!-- JAVASCRIPT & FIRESTORE LOGIC -->
     <script>
-        // Exact Firebase Keys for dheermay-musical-v2
         const firebaseConfig = {
             apiKey: "AIzaSyANQvNUy1TF2Uelwt9e_pCdwcGhasw1z38",
             authDomain: "dheermay-musical-v2.firebaseapp.com",
@@ -828,6 +626,9 @@
         const db = firebase.firestore();
 
         let currentAdminPin = "1111111111";
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
         // Realtime Password Listener
         db.collection("dheermay_config").doc("settings").onSnapshot((doc) => {
@@ -855,95 +656,65 @@
             }
         });
 
-        // Realtime Gallery Listener (Insta Reels & Videos)
-        db.collection("dheermay_gallery").onSnapshot((snapshot) => {
-            const galleryContainer = document.getElementById('live-gallery-grid');
-            const adminGalleryContainer = document.getElementById('admin-gallery-list');
-
-            if (!snapshot.empty) {
-                galleryContainer.innerHTML = '';
-                adminGalleryContainer.innerHTML = '';
-
-                snapshot.forEach((doc) => {
-                    const item = doc.data();
-                    const docId = doc.id;
-
-                    const pubCard = document.createElement('div');
-                    pubCard.className = 'fly-card shimmer-card-fx';
-
-                    let mediaContent = item.url.includes('instagram.com') 
-                        ? `<iframe src="${item.url}/embed" style="width:100%; height:420px; border:none;"></iframe>`
-                        : `<video controls><source src="${item.url}" type="video/mp4"></video>`;
-
-                    pubCard.innerHTML = `
-                        <div class="dneg-card-media" style="height: auto;">
-                            ${mediaContent}
-                        </div>
-                        <div style="padding: 20px; background: var(--surface-dark);">
-                            <h4 class="font-display" style="font-size: 18px;">${item.title}</h4>
-                            <p style="font-size: 12px; color: var(--dneg-red); font-weight: bold; margin-top: 4px;">${item.views || 'Featured Reel'}</p>
-                        </div>
-                    `;
-                    galleryContainer.appendChild(pubCard);
-
-                    const adminCard = document.createElement('div');
-                    adminCard.style.cssText = "display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-subtle); padding:10px 0;";
-                    adminCard.innerHTML = `
-                        <div>
-                            <strong>${item.title}</strong>
-                            <div style="font-size: 11px; color: var(--text-gray);">${item.views || 'No Views Specified'}</div>
-                        </div>
-                        <button onclick="deleteGalleryItem('${docId}')" style="background:red; color:white; border:none; padding:5px 12px; cursor:pointer;">Delete</button>
-                    `;
-                    adminGalleryContainer.appendChild(adminCard);
-                });
-                applyFlyingCardScrollFX();
+        // Realtime Inquiries Listener for Admin Panel
+        db.collection("dheermay_inquiries").orderBy("createdAt", "desc").onSnapshot((snapshot) => {
+            const list = document.getElementById('admin-inquiries-list');
+            if (snapshot.empty) {
+                list.innerHTML = `<p style="color: var(--text-gray); font-size: 13px;">No inquiries received yet.</p>`;
+                return;
             }
+
+            list.innerHTML = '';
+            snapshot.forEach((doc) => {
+                const item = doc.data();
+                const id = doc.id;
+                const card = document.createElement('div');
+                card.className = 'inquiry-card';
+                card.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                        <div>
+                            <strong style="font-size:16px; color:var(--text-white);">${item.name || 'Anonymous'}</strong>
+                            <div style="font-size:14px; color:var(--dneg-red); font-weight:bold; margin:2px 0;"><a href="tel:${item.phone}" style="color:inherit; text-decoration:none;">📞 ${item.phone}</a></div>
+                            <div style="font-size:12px; color:var(--text-gray);">Date/Location: ${item.dateLoc || 'Not specified'}</div>
+                            <p style="font-size:13px; color:#ccc; margin-top:8px;">${item.details || 'No additional details provided.'}</p>
+                        </div>
+                        <button onclick="deleteInquiry('${id}')" style="background:red; color:white; border:none; padding:4px 10px; cursor:pointer; font-size:11px;">Delete</button>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
         });
 
-        // Realtime Stage Shows Listener
-        db.collection("dheermay_shows").onSnapshot((snapshot) => {
-            const showsContainer = document.getElementById('live-shows-grid');
-            const adminShowsContainer = document.getElementById('admin-shows-list');
+        // Form Submission -> Save Inquiry to Firestore
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('inq-name').value;
+            const phone = document.getElementById('inq-phone').value;
+            const dateLoc = document.getElementById('inq-date').value;
+            const details = document.getElementById('inq-details').value;
 
-            if (!snapshot.empty) {
-                showsContainer.innerHTML = '';
-                adminShowsContainer.innerHTML = '';
+            db.collection("dheermay_inquiries").add({
+                name: name,
+                phone: phone,
+                dateLoc: dateLoc,
+                details: details,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            }).then(() => {
+                alert("Thank you! Your booking inquiry has been sent to Dheermay Musical Nights.");
+                document.getElementById('inq-name').value = '';
+                document.getElementById('inq-phone').value = '';
+                document.getElementById('inq-date').value = '';
+                document.getElementById('inq-details').value = '';
+            });
+        }
 
-                snapshot.forEach((doc) => {
-                    const item = doc.data();
-                    const docId = doc.id;
-
-                    const pubCard = document.createElement('div');
-                    pubCard.className = 'fly-card shimmer-card-fx';
-                    pubCard.innerHTML = `
-                        <div class="dneg-card-media">
-                            <img src="${item.imgUrl}" alt="${item.title}">
-                            <div class="dneg-card-overlay">
-                                <span class="card-badge">${item.badge}</span>
-                                <h3 class="font-display card-title">${item.title}</h3>
-                                <p style="font-size: 13px; color: var(--text-gray);">${item.desc}</p>
-                            </div>
-                        </div>
-                    `;
-                    showsContainer.appendChild(pubCard);
-
-                    const adminCard = document.createElement('div');
-                    adminCard.style.cssText = "display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-subtle); padding:10px 0;";
-                    adminCard.innerHTML = `
-                        <div>
-                            <strong>${item.title}</strong> [${item.badge}]
-                            <p style="font-size:11px; color:var(--text-gray);">${item.desc}</p>
-                        </div>
-                        <button onclick="deleteShowCard('${docId}')" style="background:red; color:white; border:none; padding:5px 12px; cursor:pointer;">Delete</button>
-                    `;
-                    adminShowsContainer.appendChild(adminCard);
-                });
-                applyFlyingCardScrollFX();
+        function deleteInquiry(id) {
+            if (confirm("Delete this inquiry?")) {
+                db.collection("dheermay_inquiries").doc(id).delete();
             }
-        });
+        }
 
-        // Helper Function to convert local device images to compressed Web Data
+        // Convert Local Device Images to Web Data
         function convertDeviceFileToWebData(file, maxWidth, callback) {
             const reader = new FileReader();
             reader.readAsDataURL(file);
@@ -962,21 +733,6 @@
             };
         }
 
-        // Handle Device Video File Upload
-        function handleHeroVideoFileUpload(input) {
-            const file = input.files[0];
-            if (!file) return;
-
-            document.getElementById('txt-hero-video-upload').innerText = "Loading " + file.name + "...";
-            const videoObjectURL = URL.createObjectURL(file);
-            
-            db.collection("dheermay_config").doc("hero_media").set({ heroVideo: videoObjectURL }, { merge: true }).then(() => {
-                alert("HandBrake compressed video file loaded directly from device!");
-                document.getElementById('txt-hero-video-upload').innerText = "🎬 Upload HandBrake Compressed Video from Device";
-            });
-        }
-
-        // Device Upload Handlers for Images
         function handleArtistPhotoUpload(input) {
             const file = input.files[0];
             if (!file) return;
@@ -990,40 +746,16 @@
             });
         }
 
-        let selectedShowCardImage = null;
-        function handleShowImageSelect(input) {
+        function handleHeroVideoFileUpload(input) {
             const file = input.files[0];
-            if (file) {
-                convertDeviceFileToWebData(file, 800, function(webImageData) {
-                    selectedShowCardImage = webImageData;
-                    document.getElementById('txt-show-img').innerText = "Loaded: " + file.name;
-                });
-            }
-        }
+            if (!file) return;
 
-        function saveShowCard() {
-            const badge = document.getElementById('show-badge').value;
-            const title = document.getElementById('show-title').value;
-            const desc = document.getElementById('show-desc').value;
-
-            if (!badge || !title || !selectedShowCardImage) {
-                alert("Please fill badge, title, and select an image file from your device.");
-                return;
-            }
-
-            db.collection("dheermay_shows").add({
-                badge: badge,
-                title: title,
-                desc: desc,
-                imgUrl: selectedShowCardImage,
-                createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            }).then(() => {
-                alert("Concert Card Published!");
-                document.getElementById('show-badge').value = '';
-                document.getElementById('show-title').value = '';
-                document.getElementById('show-desc').value = '';
-                document.getElementById('txt-show-img').innerText = "🖼️ Upload Concert Image from Device";
-                selectedShowCardImage = null;
+            document.getElementById('txt-hero-video-upload').innerText = "Loading " + file.name + "...";
+            const videoObjectURL = URL.createObjectURL(file);
+            
+            db.collection("dheermay_config").doc("hero_media").set({ heroVideo: videoObjectURL }, { merge: true }).then(() => {
+                alert("Video file loaded directly from device!");
+                document.getElementById('txt-hero-video-upload').innerText = "🎬 Upload Video File from Device";
             });
         }
 
@@ -1035,38 +767,6 @@
                 alert("Main showreel video updated!");
                 document.getElementById('main-hero-vid-input').value = '';
             });
-        }
-
-        function saveGalleryVideo() {
-            const title = document.getElementById('new-gallery-title').value;
-            const views = document.getElementById('new-gallery-views').value;
-            const url = document.getElementById('new-gallery-url').value;
-
-            if (!title || !url) return alert("Please enter title and reel URL.");
-
-            db.collection("dheermay_gallery").add({
-                title: title,
-                views: views,
-                url: url,
-                createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            }).then(() => {
-                alert("Reel added to gallery!");
-                document.getElementById('new-gallery-title').value = '';
-                document.getElementById('new-gallery-views').value = '';
-                document.getElementById('new-gallery-url').value = '';
-            });
-        }
-
-        function deleteGalleryItem(docId) {
-            if (confirm("Delete this reel from website?")) {
-                db.collection("dheermay_gallery").doc(docId).delete();
-            }
-        }
-
-        function deleteShowCard(docId) {
-            if (confirm("Delete this show card?")) {
-                db.collection("dheermay_shows").doc(docId).delete();
-            }
         }
 
         // Secret Admin Controls
@@ -1124,34 +824,6 @@
             } else {
                 alert("Passwords do not match!");
             }
-        }
-
-        // GSAP Scroll Animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        function applyFlyingCardScrollFX() {
-            gsap.utils.toArray(".fly-card").forEach((card) => {
-                gsap.fromTo(card, 
-                    { y: 120, opacity: 0, scale: 0.9, rotationX: -10 },
-                    {
-                        y: 0, opacity: 1, scale: 1, rotationX: 0,
-                        duration: 0.9, ease: "power3.out",
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 90%",
-                            end: "bottom 10%",
-                            toggleActions: "play reverse play reverse"
-                        }
-                    }
-                );
-            });
-        }
-
-        applyFlyingCardScrollFX();
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert("Booking request received! We will get back to you shortly.");
         }
     </script>
 </body>
